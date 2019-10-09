@@ -12,35 +12,35 @@ public class AddingMachine {
 	private int total; //current total value
 	private String history;	//history of transactions
 	
-	//Default constructor, sets total to 0 and string to "0"
+	//Default constructor, sets total to 0 and string to "0". Takes no arguments.
 	public AddingMachine () {
 		total = 0;  // initializes total
 		history = "0"; // initializes history.
 	}
 	
-	//Returns the value of total
+	//Returns the value of total. Takes no arguments
 	public int getTotal () {
 		return total; //return total
 	}
 	
-	//Takes an int value and adds it to the total.
+	//Takes an integer value and adds it to the total. Includes it in the history string.
 	public void add (int value) {
 		history += " + " + value; //log in history
 		total += value; //add to total
 	}
 	
-	//Takes an int value and subtracts it from the total.
+	//Takes an integer value and subtracts it from the total. Includes it in the history string.
 	public void subtract (int value) {
 		history += " - " + value; //log in history
 		total -= value; //subtract from total
 	}
 		
-	//Returns the history of operations, from original.
+	//Returns the history of operations, from original. Takes no arguments.
 	public String toString () { 
-		return history;
+		return history; //returns the string history, containing all addition and subtractions from input.
 	}
 
-	//Sets the total to 0 and removes the history.
+	//Sets the total to 0 and removes the history. Takes no arguments.
 	public void clear() {
 		total = 0; //sets to default
 		history = "0"; //sets to default
